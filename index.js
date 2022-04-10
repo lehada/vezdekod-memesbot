@@ -107,6 +107,10 @@ vk.updates.on('message', async (context) => {
     };
   };
 
+  if(context.text.toLowerCase() == 'привет') return context.send({
+    message: `Привет вездекодерам!`
+  });
+
   if(context.text.toLowerCase() == "начать") return context.send({
     message: `Добро пожаловать!\n\nЧтобы взаимодействовать с чат-ботом, используйте клавиатуру!`,
     keyboard: main()
